@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="star">
+<input type="button" onclick="checkStars()" value="Check">
+<script>
+    let stars = new Array('Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus');
+    let constellation = new Array('Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo');
+
+    function checkStars() {
+        let star = document.getElementById('star').value;
+        for (let i = 0; i < stars.length; i++) {
+            if (star === stars[i]) {
+                alert(constellation[i]);
+                return constellation[i];
+            }
+        }
+        alert("Not found !")
+        return false;
+    }
+</script>
+</body>
+</html>
